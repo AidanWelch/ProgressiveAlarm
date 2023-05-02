@@ -1,0 +1,37 @@
+home page:
+	list alarms format
+	time | days | challenge | on/off | next rings
+settings:
+	animations toggle
+	time format
+	pause all alarms
+
+alarm settings:
+	on/off
+	alarm sound | vibrate on/off
+	wakeup check on/off, number or continuous
+	speak time | language
+	set timezone or follow phone
+	number of challenges
+	challenge(show list of boxes each with settings, checkbox select, can be mix which will random mix):
+		math | language math:
+			difficulty
+			?language
+		language numbers:
+			difficulty
+			language
+		basic nouns:
+			difficulty
+			toggle colors
+			toggle animals
+			toggle machines
+			toggle place
+		custom words:
+			?import from browser extension
+		?sync service?
+
+themes:
+- typewriter, white
+- code, dark
+
+design to be accessible
