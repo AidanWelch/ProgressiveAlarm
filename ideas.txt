@@ -1,6 +1,6 @@
 home page:
 	list alarms format
-	time | days | challenge | on/off | next rings
+	time | frequency | challenge | on/off | next rings
 settings:
 	animations toggle
 	time format
