@@ -32,10 +32,12 @@ export default function Home({ navigation }) {
 	return (
 		<View>
 			<SectionList
-				sections={[
-					{ title: 'Daily', data: alarms },
-					{ title: 'New Alarm', data: ['newalarm'] },
-				]}
+				sections={() => {
+					return [
+						{ title: 'Daily', data: alarms },
+						{ title: 'New Alarm', data: ['newalarm'] },
+					];
+				}}
 				keyExtractor={(item) => item}
 				renderItem={(item) =>
 					item.item === 'newalarm' ? (
