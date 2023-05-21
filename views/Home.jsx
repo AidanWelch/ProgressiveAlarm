@@ -1,6 +1,4 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState } from 'react';
 import { StyleSheet, Text, View, SectionList } from 'react-native';
 
@@ -32,18 +30,16 @@ export default function Home({ navigation }) {
 	return (
 		<View>
 			<SectionList
-				sections={() => {
-					return [
-						{ title: 'Daily', data: alarms },
-						{ title: 'New Alarm', data: ['newalarm'] },
-					];
-				}}
-				keyExtractor={(item) => item}
-				renderItem={(item) =>
+				sections={[
+					{ title: 'Daily', data: alarms },
+					{ title: 'New Alarm', data: ['newalarm'] },
+				]}
+				keyExtractor={({item}) => item}
+				renderItem={({item}) =>
 					item.item === 'newalarm' ? (
 						<NewAlarmComponent nextAlarmId={nextAlarmId} />
 					) : (
-						<AlarmComponent alarmId={item} theme={theme} />
+						<AlarmComponent alarmId={item} theme={theme} navigation={navigation}/>
 					)
 				}
 				renderSectionHeader={({ section: { title } }) => <Text>{title}</Text>}
