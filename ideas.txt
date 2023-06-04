@@ -26,9 +26,11 @@ alarm settings:
 			toggle animals
 			toggle machines
 			toggle place
+		select countries on map
 		custom words:
 			?import from browser extension
 		?sync service?
+		new question on fail: boolean
 
 themes:
 - typewriter, white
