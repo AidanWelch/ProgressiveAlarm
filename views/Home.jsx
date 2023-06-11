@@ -36,8 +36,8 @@ export default function Home({ navigation }) {
 				]}
 				keyExtractor={({item}) => item}
 				renderItem={({item}) =>
-					item.item === 'newalarm' ? (
-						<NewAlarmComponent nextAlarmId={nextAlarmId} />
+					item === 'newalarm' ? (
+						<NewAlarmComponent nextAlarmId={nextAlarmId} theme={theme} navigation={navigation} />
 					) : (
 						<AlarmComponent alarmId={item} theme={theme} navigation={navigation}/>
 					)
